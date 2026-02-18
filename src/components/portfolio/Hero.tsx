@@ -16,7 +16,6 @@ export const Hero = () => {
       id="about"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background image */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -25,10 +24,7 @@ export const Hero = () => {
           backgroundPosition: "center",
         }}
       />
-      {/* Overlay */}
       <div className="absolute inset-0 z-0 bg-background/80" />
-
-      {/* Subtle grid pattern */}
       <div
         className="absolute inset-0 z-0 opacity-5"
         style={{
@@ -44,15 +40,13 @@ export const Hero = () => {
         ref={containerRef}
         className="reveal relative z-10 container mx-auto px-6 text-center max-w-4xl"
       >
-        {/* Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-medium mb-8 animate-fade-in">
           <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-glow" />
           Disponible pour de nouvelles opportunités
         </div>
 
-        {/* Name */}
         <h1 className="font-display text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up delay-100">
-          Votre <span className="text-gradient">Nom</span>
+          ANDRIANAIVO Haingo <span className="text-gradient">Harizo</span>
         </h1>
 
         {/* Title */}
@@ -94,7 +88,7 @@ export const Hero = () => {
         {/* Social links */}
         <div className="flex items-center justify-center gap-5 animate-fade-in-up delay-500">
           <a
-            href="https://github.com/votre-username"
+            href="https://github.com/Eclisher"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -103,7 +97,7 @@ export const Hero = () => {
             <Github size={22} />
           </a>
           <a
-            href="https://linkedin.com/in/votre-profil"
+            href="https://www.linkedin.com/in/harizo-andrianaivo-a93b75263"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -112,7 +106,7 @@ export const Hero = () => {
             <Linkedin size={22} />
           </a>
           <a
-            href="mailto:votre@email.com"
+            href="mailto:haingo.harizo.andrianaivo@gmail.com"
             className="text-muted-foreground hover:text-primary transition-colors duration-200"
             aria-label="Email"
           >

@@ -5,8 +5,7 @@ export const ThemeControls = () => {
   const { mode, color, setMode, setColor } = useThemeConfig();
 
   return (
-    <div className="flex items-center gap-2">
-      {/* Color swatches */}
+    <div className="flex items-center gap-2"> 
       <div className="flex items-center gap-1.5">
         {(Object.entries(colorTokens) as [ThemeColor, typeof colorTokens[ThemeColor]][]).map(
           ([key, cfg]) => (

@@ -48,7 +48,6 @@ export const Contact = () => {
     const newErrors = validate();
     setErrors(newErrors);
     if (Object.keys(newErrors).length > 0) return;
-    // Simulated send — connect to backend/email service as needed
     setSubmitted(true);
     setForm({ name: "", email: "", message: "" });
   };
@@ -60,14 +59,12 @@ export const Contact = () => {
 
   return (
     <section id="contact" ref={sectionRef} className="py-24 relative">
-      {/* Subtle gradient top */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{ background: "var(--gradient-accent)", opacity: 0.3 }}
       />
 
       <div className="container mx-auto px-6 max-w-5xl">
-        {/* Section header */}
         <div className="text-center mb-16 reveal">
           <span className="text-primary text-sm font-medium tracking-widest uppercase">Contact</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2 mb-4">
@@ -79,9 +76,7 @@ export const Contact = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-          {/* Left: Info */}
           <div className="reveal flex flex-col gap-8">
-            {/* Contact info cards */}
             <div className="flex flex-col gap-4">
               <a
                 href="mailto:votre@email.com"
@@ -134,7 +129,6 @@ export const Contact = () => {
             </div>
           </div>
 
-          {/* Right: Form */}
           <div className="reveal" style={{ transitionDelay: "0.15s" }}>
             {submitted ? (
               <div className="card-surface rounded-xl p-8 text-center border-primary/30">
@@ -152,7 +146,7 @@ export const Contact = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="card-surface rounded-xl p-8 flex flex-col gap-5" noValidate>
-                {/* Name */}
+         
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">
                     Nom complet
