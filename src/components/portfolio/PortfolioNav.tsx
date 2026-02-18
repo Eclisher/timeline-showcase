@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { ThemeControls } from "./ThemeControls";
 
 const navLinks = [
   { href: "#about", label: "À propos" },
@@ -60,7 +61,7 @@ export const PortfolioNav = () => {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <button
               key={link.href}
@@ -74,6 +75,7 @@ export const PortfolioNav = () => {
               {link.label}
             </button>
           ))}
+          <ThemeControls />
           <a
             href="mailto:votre@email.com"
             className="px-4 py-2 rounded-md border border-primary text-primary text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-all duration-200"
@@ -108,6 +110,9 @@ export const PortfolioNav = () => {
               {link.label}
             </button>
           ))}
+          <div className="pt-2 border-t border-border">
+            <ThemeControls />
+          </div>
         </div>
       )}
     </header>
