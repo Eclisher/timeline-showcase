@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="container mx-auto px-6 max-w-5xl flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="font-display font-bold text-lg">
           <span className="text-gradient font-bold">&lt;</span>
-          <span className="text-foreground">Dev</span>
+          <span className="text-foreground">Eclisher</span>
           <span className="text-gradient font-bold">/&gt;</span>
         </p>
 
@@ -16,7 +16,7 @@ export const Footer = () => {
 
         <div className="flex items-center gap-4">
           <a
-            href="https://github.com/votre-username"
+            href="https://github.com/Eclisher"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -25,7 +25,7 @@ export const Footer = () => {
             <Github size={18} />
           </a>
           <a
-            href="https://linkedin.com/in/votre-profil"
+            href="https://www.linkedin.com/in/harizo-andrianaivo-a93b75263"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-primary transition-colors"
@@ -34,7 +34,7 @@ export const Footer = () => {
             <Linkedin size={18} />
           </a>
           <a
-            href="mailto:votre@email.com"
+            href="mailto:haingo.harizo.andrianaivo@gmail.com"
             className="text-muted-foreground hover:text-primary transition-colors"
             aria-label="Email"
           >

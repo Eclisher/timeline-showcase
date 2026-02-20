@@ -79,7 +79,7 @@ export const Contact = () => {
           <div className="reveal flex flex-col gap-8">
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:votre@email.com"
+                href="mailto:haingo.harizo.andrianaivo@gmail.com"
                 className="flex items-center gap-4 card-surface rounded-xl p-4 hover:border-primary/30 transition-all duration-200 group"
               >
                 <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0 group-hover:bg-primary/15 transition-colors">
@@ -88,13 +88,13 @@ export const Contact = () => {
                 <div>
                   <p className="text-xs text-muted-foreground mb-0.5">Email professionnel</p>
                   <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                    votre@email.com
+                    haingo.harizo.andrianaivo@gmail.com
                   </p>
                 </div>
               </a>
 
               <a
-                href="https://github.com/votre-username"
+                href="https://github.com/Eclisher"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 card-surface rounded-xl p-4 hover:border-primary/30 transition-all duration-200 group"
@@ -105,13 +105,13 @@ export const Contact = () => {
                 <div>
                   <p className="text-xs text-muted-foreground mb-0.5">GitHub</p>
                   <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                    github.com/votre-username
+                    github.com/Eclisher
                   </p>
                 </div>
               </a>
 
               <a
-                href="https://linkedin.com/in/votre-profil"
+                href="https://www.linkedin.com/in/harizo-andrianaivo-a93b75263"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 card-surface rounded-xl p-4 hover:border-primary/30 transition-all duration-200 group"
@@ -122,7 +122,7 @@ export const Contact = () => {
                 <div>
                   <p className="text-xs text-muted-foreground mb-0.5">LinkedIn</p>
                   <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                    linkedin.com/in/votre-profil
+                    linkedin.com/in/harizo-andrianaivo
                   </p>
                 </div>
               </a>

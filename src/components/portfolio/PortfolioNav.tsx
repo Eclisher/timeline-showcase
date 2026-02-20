@@ -56,7 +56,7 @@ export const PortfolioNav = () => {
           className="font-display font-700 text-xl tracking-tight"
         >
           <span className="text-gradient font-bold">&lt;</span>
-          <span className="font-bold text-foreground">Dev</span>
+          <span className="font-bold text-foreground">Eclisher</span>
           <span className="text-gradient font-bold">/&gt;</span>
         </a>
 
