@@ -1,5 +1,7 @@
 import { useEffect, useRef } from "react";
 import harizoImg from "@/assets/harizo1.png";
+import SERA from "@/assets/figureSERA.png";
+import figure from "@/assets/figure6.png";
 import { Briefcase, GraduationCap, Users, Code2, Github, ExternalLink } from "lucide-react";
 import {
   SiNextdotjs,
@@ -83,7 +85,7 @@ const timelineData: TimelineItem[] = [
     description:
       "Développement d'une application web interne. Développement d'un gestion de candidature,cette application permet de gérer les candidatures des clients, les entretiens et les offres d'emploi. Ansi la postulation rapide des candidats pour les offres d'emploi.",
     tags: ["NextJS", "C#", "Postgresql", "GitLab", "Github"],
-    previewImage: harizoImg,
+    previewImage: figure,
   },
   {
     id: 3,
@@ -105,7 +107,7 @@ const timelineData: TimelineItem[] = [
     description:
       "Développement d'un plateforme d'échange de cryptomonnaies pour les utilisateurs de Seramoney. La plateforme permet aux utilisateurs d'acheter, vendre et échanger des cryptomonnaies de manière sécurisée et rapide manuelement ou automatiquement.",
     tags: ["React", "Vite", "Github", "Excel"],
-    previewImage: harizoImg,
+    previewImage: SERA,
   },
   {
     id: 4,
@@ -269,11 +271,11 @@ export const Timeline = () => {
                         className={`flex flex-wrap gap-1.5 ${isLeft ? "md:justify-end" : ""}`}
                       >
                         {item.previewImage && (
-                          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+                          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 x backdrop-blur-md flex items-center justify-center p-4">
                             <img
                               src={item.previewImage}
                               alt="Preview"
-                              className="rounded-lg shadow-lg max-h-60 object-cover"
+                              className="rounded-lg shadow-lg  object-cover"
                             />
                           </div>
                         )}
