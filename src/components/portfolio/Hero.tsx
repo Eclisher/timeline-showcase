@@ -41,7 +41,6 @@ export const Hero = () => {
         className="reveal relative z-10 container mx-auto px-6 max-w-6xl"
       >
         <div className="grid md:grid-cols-2 items-center gap-12">
-          {/* LEFT SIDE - TEXT */}
           <div className="text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-medium mb-8 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-glow" />
@@ -139,7 +138,6 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 animate-bounce">
         <ArrowDown size={20} className="text-muted-foreground" />
       </div>
