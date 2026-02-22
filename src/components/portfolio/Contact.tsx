@@ -6,6 +6,7 @@ export const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,14 +44,33 @@ export const Contact = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const newErrors = validate();
-    setErrors(newErrors);
-    if (Object.keys(newErrors).length > 0) return;
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  const newErrors = validate();
+  setErrors(newErrors);
+  if (Object.keys(newErrors).length > 0) return;
+
+  try {
+    setLoading(true);
+
+    await fetch(import.meta.env.VITE_GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form),
+    });
+
     setSubmitted(true);
     setForm({ name: "", email: "", message: "" });
-  };
+  } catch (error) {
+    alert("Erreur lors de l'envoi du message.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -66,12 +86,15 @@ export const Contact = () => {
 
       <div className="container mx-auto px-6 max-w-5xl">
         <div className="text-center mb-16 reveal">
-          <span className="text-primary text-sm font-medium tracking-widest uppercase">Contact</span>
+          <span className="text-primary text-sm font-medium tracking-widest uppercase">
+            Contact
+          </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2 mb-4">
             Travaillons <span className="text-gradient">ensemble</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Une opportunité ? Un projet ? Ou simplement envie d'échanger ? Je suis disponible et réactif.
+            Une opportunité ? Un projet ? Ou simplement envie d'échanger ? Je
+            suis disponible et réactif.
           </p>
         </div>
 
@@ -86,7 +109,9 @@ export const Contact = () => {
                   <Mail size={18} className="text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-0.5">Email professionnel</p>
+                  <p className="text-xs text-muted-foreground mb-0.5">
+                    Email professionnel
+                  </p>
                   <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
                     haingo.harizo.andrianaivo@gmail.com
                   </p>
@@ -120,7 +145,9 @@ export const Contact = () => {
                   <Linkedin size={18} className="text-primary" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground mb-0.5">LinkedIn</p>
+                  <p className="text-xs text-muted-foreground mb-0.5">
+                    LinkedIn
+                  </p>
                   <p className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
                     linkedin.com/in/harizo-andrianaivo
                   </p>
@@ -133,9 +160,12 @@ export const Contact = () => {
             {submitted ? (
               <div className="card-surface rounded-xl p-8 text-center border-primary/30">
                 <CheckCircle size={48} className="text-primary mx-auto mb-4" />
-                <h3 className="font-display font-bold text-xl mb-2">Message envoyé !</h3>
+                <h3 className="font-display font-bold text-xl mb-2">
+                  Message envoyé !
+                </h3>
                 <p className="text-muted-foreground text-sm mb-6">
-                  Merci pour votre message. Je vous répondrai dans les plus brefs délais.
+                  Merci pour votre message. Je vous répondrai dans les plus
+                  brefs délais.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
@@ -145,10 +175,16 @@ export const Contact = () => {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="card-surface rounded-xl p-8 flex flex-col gap-5" noValidate>
-         
+              <form
+                onSubmit={handleSubmit}
+                className="card-surface rounded-xl p-8 flex flex-col gap-5"
+                noValidate
+              >
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-foreground mb-1.5"
+                  >
                     Nom complet
                   </label>
                   <input
@@ -163,12 +199,18 @@ export const Contact = () => {
                       errors.name ? "border-destructive" : "border-border"
                     }`}
                   />
-                  {errors.name && <p className="mt-1 text-xs text-destructive">{errors.name}</p>}
+                  {errors.name && (
+                    <p className="mt-1 text-xs text-destructive">
+                      {errors.name}
+                    </p>
+                  )}
                 </div>
 
-                {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-foreground mb-1.5"
+                  >
                     Email
                   </label>
                   <input
@@ -183,12 +225,17 @@ export const Contact = () => {
                       errors.email ? "border-destructive" : "border-border"
                     }`}
                   />
-                  {errors.email && <p className="mt-1 text-xs text-destructive">{errors.email}</p>}
+                  {errors.email && (
+                    <p className="mt-1 text-xs text-destructive">
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
-
-                {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-foreground mb-1.5"
+                  >
                     Message
                   </label>
                   <textarea
@@ -205,21 +252,55 @@ export const Contact = () => {
                   />
                   <div className="flex justify-between mt-1">
                     {errors.message ? (
-                      <p className="text-xs text-destructive">{errors.message}</p>
+                      <p className="text-xs text-destructive">
+                        {errors.message}
+                      </p>
                     ) : (
                       <span />
                     )}
-                    <p className="text-xs text-muted-foreground">{form.message.length}/2000</p>
+                    <p className="text-xs text-muted-foreground">
+                      {form.message.length}/2000
+                    </p>
                   </div>
                 </div>
 
-                {/* Submit */}
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-all duration-200 shadow-glow"
-                >
-                  <Send size={16} />
-                  Envoyer le message
+                  disabled={loading}
+                  className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-md 
+                  bg-primary text-primary-foreground font-medium 
+                  transition-all duration-200 shadow-glow
+                  ${loading ? "opacity-70 cursor-not-allowed" : "hover:bg-primary/90"}`}
+                  >
+                  {loading ? (
+                    <>
+                      <svg
+                        className="animate-spin h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        />
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                        />
+                      </svg>
+                      Envoi en cours...
+                    </>
+                  ) : (
+                    <>
+                      <Send size={16} />
+                      Envoyer le message
+                    </>
+                  )}
                 </button>
               </form>
             )}
