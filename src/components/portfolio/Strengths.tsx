@@ -68,7 +68,7 @@ export const Strengths = () => {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(70% 60% at 50% 0%, hsl(var(--primary) / 0.08), transparent 70%)",
+            "radial-gradient(70% 60% at 50% 0%, hsl(var(--primary) / 0.15), transparent 90%)",
         }}
       />
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
