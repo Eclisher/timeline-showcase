@@ -61,34 +61,29 @@ export const Strengths = () => {
     <section
       id="strengths"
       ref={sectionRef}
-      className="py-24 relative"
-      style={{
-        background:
-          "linear-gradient(180deg, hsl(var(--background)) 0%, hsl(222 25% 9%) 50%, hsl(var(--background)) 100%)",
-      }}
+      className="py-24 relative overflow-hidden
+  bg-gradient-to-b from-background via-background/95 to-background"
     >
-      {/* Subtle background accent */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-30"
+        className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 70% 50% at 50% 50%, hsl(var(--primary) / 0.06), transparent)",
+            "radial-gradient(70% 60% at 50% 0%, hsl(var(--primary) / 0.08), transparent 70%)",
         }}
       />
-
       <div className="container mx-auto px-6 max-w-6xl relative z-10">
-        {/* Section header */}
         <div className="text-center mb-16 reveal">
-          <span className="text-primary text-sm font-medium tracking-widest uppercase">Savoir-être</span>
+          <span className="text-primary text-sm font-medium tracking-widest uppercase">
+            Savoir-être
+          </span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2 mb-4">
             Points <span className="text-gradient">forts</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Au-delà des compétences techniques, ce sont mes qualités humaines qui font la différence.
+            Au-delà des compétences techniques, ce sont mes qualités humaines
+            qui font la différence.
           </p>
         </div>
-
-        {/* Cards grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {strengths.map((item, i) => {
             const Icon = item.icon;
@@ -98,29 +93,34 @@ export const Strengths = () => {
                 className="reveal card-surface rounded-xl p-6 hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 group"
                 style={{ transitionDelay: `${i * 0.08}s` }}
               >
-                {/* Icon */}
                 <div className="w-11 h-11 rounded-lg flex items-center justify-center mb-5 bg-primary/10 border border-primary/20 group-hover:bg-primary/15 transition-colors">
                   <Icon size={20} className="text-primary" />
                 </div>
 
-                {/* Badge */}
-                <p className="text-xs text-primary font-medium mb-2">{item.metric}</p>
+                <p className="text-xs text-primary font-medium mb-2">
+                  {item.metric}
+                </p>
 
                 <h3 className="font-display font-bold text-lg text-foreground mb-3 group-hover:text-primary transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {item.description}
+                </p>
               </div>
             );
           })}
-
-          {/* Extra decorative card */}
-          <div className="reveal sm:col-span-2 lg:col-span-0 lg:hidden xl:block card-surface rounded-xl p-6 flex items-center justify-center border-primary/20"
+          <div
+            className="reveal sm:col-span-2 lg:col-span-0 lg:hidden xl:block card-surface rounded-xl p-6 flex items-center justify-center border-primary/20"
             style={{ transitionDelay: `${strengths.length * 0.08}s` }}
           >
             <div className="text-center">
-              <p className="font-display text-5xl font-bold text-gradient mb-2">100%</p>
-              <p className="text-muted-foreground text-sm">Investissement dans chaque projet</p>
+              <p className="font-display text-5xl font-bold text-gradient mb-2">
+                100%
+              </p>
+              <p className="text-muted-foreground text-sm">
+                Investissement dans chaque projet
+              </p>
             </div>
           </div>
         </div>
