@@ -162,7 +162,7 @@ export const Timeline = () => {
         <div className="text-center mb-16 reveal">
           <span className="text-primary text-sm font-medium tracking-widest uppercase">Parcours</span>
           <h2 className="font-display text-4xl md:text-5xl font-bold mt-2 mb-4">
-            Mon <span className="text-gradient">Expérience</span>
+            Mes <span className="text-gradient">Expériences</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Un parcours jalonné de projets concrets, de collaborations enrichissantes et d'apprentissages continus.
