@@ -40,7 +40,7 @@ export const Hero = () => {
         ref={containerRef}
         className="reveal relative z-10 container mx-auto px-6 max-w-6xl"
       >
-        <div className="grid md:grid-cols-2 items-center gap-12">
+        <div className="grid md:grid-cols-2 items-center gap-12 mt-16">
           <div className="text-center md:text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs font-medium mb-8 animate-fade-in">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse-glow" />

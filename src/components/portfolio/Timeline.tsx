@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
-import harizoImg from "@/assets/harizo1.png";
+import carshow from "@/assets/carshow.png";
 import SERA from "@/assets/figureSERA.png";
+import planning from "@/assets/planning.png";
 import figure from "@/assets/figure6.png";
 import { Briefcase, GraduationCap, Users, Code2, Github, ExternalLink } from "lucide-react";
 import {
@@ -74,7 +75,7 @@ const timelineData: TimelineItem[] = [
     description:
       "Développement d'une application web interne. Développement d'un gestion de planing pour tous les employés de l'entreprise",
     tags: ["NextJS", "Csharp", "MongoDB", "GitLab"],
-    githubUrl: "https://github.com/tonrepo",
+    previewImage: planning,
   },
   {
     id: 2,
@@ -95,8 +96,9 @@ const timelineData: TimelineItem[] = [
     period: "Mai 2024  — Juin 2024",
     description:
       "Le plateforme de vente des voitures 'CarShow' permet de gérer les ventes de voitures en ligne. Les utilisateurs peuvent voir les voitures disponibles, les détails de chaque voiture, et effectuer des achats en ligne.",
-    tags: ["React", "Vite", "Java", "Postgresql", "Github"],
+    tags: ["NextJS", "Java", "Postgresql", "Github"],
     githubUrl: "https://github.com/MoreThanWeb3",
+    previewImage: carshow
   },
   {
     id: 3,
