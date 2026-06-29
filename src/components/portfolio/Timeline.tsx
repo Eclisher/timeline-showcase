@@ -26,6 +26,7 @@ import {
   SiGithub,
   SiSharp,
   SiGitlab,
+  SiExpress,
   SiNodedotjs,
   SiVite,
 } from "react-icons/si";
@@ -33,6 +34,7 @@ import { FaJava, FaFileExcel, FaCheck } from "react-icons/fa";
 
 const techIcons: Record<string, React.ElementType> = {
   NextJS: SiNextdotjs,
+  ExpressJS : SiExpress,
   TypeScript: SiTypescript,
   MongoDB: SiMongodb,
   Postgresql: SiPostgresql,
@@ -100,17 +102,6 @@ const timelineData: TimelineItem[] = [
   {
     id: 2,
     category: "stage",
-    title: "Développeur Web",
-    organization: "EqimaIT Solutsion",
-    period: "Mars 2026 — Septembre 2026",
-    description:
-  "Développement de Jirakaiky Web, une plateforme de payé les factures en ligne, acheter des codes de recharges, et payer les abonnements. Cette plateforme est une application web public pour facilité les paiements des factures Jirama",
-    tags: ["React", "Express", "Github"],
-    liveUrl: "https://preprod.jirakaiky.eqima.org/",
-  },
-  {
-    id: 3,
-    category: "stage",
     title: "Développeur Front-End",
     organization: "AllForOne Madagascar",
     period: "Juin 2025 — Octobre 2025",
@@ -118,6 +109,17 @@ const timelineData: TimelineItem[] = [
       "Développement d'une application web interne. Développement d'un gestion de candidature, cette application permet de gérer les candidatures des clients, les entretiens et les offres d'emploi. Ainsi la postulation rapide des candidats pour les offres d'emploi.",
     tags: ["NextJS", "C#", "Postgresql", "GitLab", "Github"],
     previewImage: figure,
+  },
+  {
+    id: 3,
+    category: "stage",
+    title: "Développeur Web",
+    organization: "EqimaIT Solution",
+    period: "Mars 2026 — Septembre 2026",
+    description:
+      "Développement de Jirakaiky Web, une plateforme de payé les factures en ligne, acheter des codes de recharges, et payer les abonnements. Cette plateforme est une application web public pour facilité les paiements des factures Jirama",
+    tags: ["React", "ExpressJS", "NodeJS", "Github"],
+    liveUrl: "https://preprod.jirakaiky.eqima.org/",
   },
   {
     id: 4,
