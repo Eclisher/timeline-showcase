@@ -100,6 +100,17 @@ const timelineData: TimelineItem[] = [
   {
     id: 2,
     category: "stage",
+    title: "Développeur Web",
+    organization: "EqimaIT Solutsion",
+    period: "Mars 2026 — Septembre 2026",
+    description:
+  "Développement de Jirakaiky Web, une plateforme de payé les factures en ligne, acheter des codes de recharges, et payer les abonnements. Cette plateforme est une application web public pour facilité les paiements des factures Jirama",
+    tags: ["React", "Express", "Github"],
+    liveUrl: "https://preprod.jirakaiky.eqima.org/",
+  },
+  {
+    id: 3,
+    category: "stage",
     title: "Développeur Front-End",
     organization: "AllForOne Madagascar",
     period: "Juin 2025 — Octobre 2025",
@@ -109,7 +120,7 @@ const timelineData: TimelineItem[] = [
     previewImage: figure,
   },
   {
-    id: 3,
+    id: 4,
     category: "academic",
     title: "CarShow",
     organization: "FullStack - Projet d'examen Web3",
@@ -121,7 +132,7 @@ const timelineData: TimelineItem[] = [
     previewImage: carshow,
   },
   {
-    id: 4,
+    id: 5,
     category: "collaboration",
     title: "Seramoney Echange",
     organization: "Seramoney Madagascar",
@@ -132,7 +143,7 @@ const timelineData: TimelineItem[] = [
     previewImage: SERA,
   },
   {
-    id: 5,
+    id: 6,
     category: "academic",
     title: "Application Mobile Vazou",
     organization: "Projet Mob1 - 2 personnes",
@@ -143,7 +154,7 @@ const timelineData: TimelineItem[] = [
     githubUrl: "https://github.com/RickaPrincy/Vazou",
   },
   {
-    id: 6,
+    id: 7,
     category: "freelance",
     title: "Site Vitrine Seramoney MDG",
     organization: "Seramoney Madagascar",
