@@ -96,11 +96,11 @@ export const Hero = () => {
                 <div className="absolute -inset-2 bg-gradient-to-r from-primary/30 via-purple-500/20 to-pink-500/30 rounded-3xl blur-2xl opacity-40 group-hover:opacity-70 transition duration-700" />
 
                 <div className="relative w-full h-full rounded-3xl overflow-hidden">
-                  <img
-                    src={harizoImg}
-                    alt="Harizo"
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                  />
+<img
+                      src={harizoImg}
+                      alt="Harizo"
+                      className="w-full h-full object-cover group-hover:grayscale transition-all duration-700"
+                    />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-20 transition duration-700" />
                 </div>
